@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Travel Explorer</div>
+    <ul class="nav-links">
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#accommodations">Accommodations</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero-left">
+      <h1>Explore the World</h1>
+      <p>Discover your next great adventure with our curated destinations and activities!</p>
+    </div>
+    <div class="hero-right">
+      <div class="destination-card">
+        <h3>Choose Destination</h3>
+        <select id="destinationSelector">
+          <option value="Image/HERO-BG.JPG" selected>Default</option>
+          <option value="Image/DESTINATION1.jpeg">Destination 1</option>
+          <option value="Image/DESTINATION2.jpeg">Destination 2</option>
+          <option value="Image/DESTINATION3.jpg">Destination 3</option>
+          <option value="Image/DESTINATION4.jpeg">Destination 4</option>
+          <option value="Image/DESTINATION5.jpeg">Destination 5</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <section class="destinations">
+    <h2>Explore Destinations</h2>
+    <div class="destination-carousel">
+      <div class="carousel-track">
+        <div class="destination">
+          <a href="Activities1.html" target="_blank">
+            <img src="Image/DESTINATION1.jpeg" alt="Destination 1">
+            <div class="overlay">
+              <p>Discover Destination 1</p>
+            </div>
+          </a>
+        </div>
+        <div class="destination">
+          <a href="Activities2.html" target="_blank">
+            <img src="Image/DESTINATION2.jpeg" alt="Destination 2">
+            <div class="overlay">
+              <p>Explore Destination 2</p>
+            </div>
+          </a>
+        </div>
+        <div class="destination">
+          <a href="Activities3.html" target="_blank">
+            <img src="Image/DESTINATION3.jpg" alt="Destination 3">
+            <div class="overlay">
+              <p>Visit Destination 3</p>
+            </div>
+          </a>
+        </div>
+        <!-- Add more destinations as needed -->
+        <div class="destination">
+          <a href="Activities4.html" target="_blank">
+            <img src="Image/DESTINATION4.jpeg" alt="Destination 4">
+            <div class="overlay">
+              <p>Visit Destination 4</p>
+            </div>
+          </a>
+        </div>
+        <div class="destination">
+          <a href="Activities5.html" target="_blank">
+            <img src="Image/DESTINATION5.jpeg" alt="Destination 5">
+            <div class="overlay">
+              <p>Visit Destination 5</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- Deals Section -->
+  <section class="deals">
+    <h2>Promo Deals</h2>
+    <div class="deals-offers-banner">
+      <div class="banner">
+        <img src="Image/BANNER1.jpg" alt="Deal 1">
+      </div>
+      <div class="banner">
+        <img src="Image/BANNER2.jpeg" alt="Deal 2">
+      </div>
+      <div class="banner">
+        <img src="Image/BANNER3.jpg" alt="Deal 3">
+      </div>
+    </div>    
+  </section>
+
+  <section class="about-us">
+    <h2>About Us</h2>
+    <p>
+      Welcome to <strong>Travel Explorer</strong>, your gateway to extraordinary journeys. 
+      Our mission is to make travel simple, inspiring, and memorable for everyone.
+    </p>
+    <p>
+      From breathtaking landscapes to cultural hotspots, we connect you with destinations that match your dreams. 
+      With years of expertise, we ensure every trip is a seamless experience filled with wonder.
+    </p>
+    <p>
+      <strong>Why Choose Us?</strong>
+    </p>
+    <ul>
+      <li>Personalized travel packages for all preferences.</li>
+      <li>Round-the-clock customer support.</li>
+      <li>Partnerships with trusted global brands.</li>
+      <li>Award-winning service and expertise.</li>
+    </ul>
+    <p>Let us help you explore the world. Your adventure awaits!</p>
+  </section>
+  
+  <section class="faq-support">
+    <h2>FAQ and Support</h2>
+    <div class="faq-item">
+      <h3>How do I book a trip?</h3>
+      <p>Simply browse our website, select your destination or package, and click "Book Now" to complete your reservation.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I modify my booking?</h3>
+      <p>Yes! Changes can be made up to 48 hours before your trip. Contact our support team for help.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What payment options are available?</h3>
+      <p>We accept credit/debit cards, PayPal, and bank transfers. International options vary by location.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What is your cancellation policy?</h3>
+      <p>Cancellations made 7 days before the trip are fully refundable. Partial refunds apply for shorter notice.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Need help?</h3>
+      <p>Contact us at <a href="mailto:support@travelexplorer.com">support@travelexplorer.com</a> or call <strong>1-800-TRAVEL</strong>.</p>
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Travel Company. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

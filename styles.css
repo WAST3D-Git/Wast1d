@@ -1,0 +1,424 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Space out the logo and links */
+  align-items: center;
+  padding: 20px 5px; /* Adjust padding to balance the layout */
+  z-index: 1000;
+  background: linear-gradient(to bottom, rgba(255, 132, 31, 0.7), transparent);
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-left: 30px; /* Ensure logo stays at the left */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px; /* Spacing between links */
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 30px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background: white;
+  color: #333;
+}
+
+
+
+/* Hero Section */
+.hero {
+  background-image: url('Image/HERO-BG.JPG'); /* Default background */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 20px;
+  height: 100vh; /* Full screen height */
+  position: relative;
+  z-index: 1;
+  transition: transform 1s ease-in-out;
+}
+
+.hero-left {
+  max-width: 50%;
+}
+
+.hero-left h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.hero-left p {
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+.hero-right {
+  max-width: 30%;
+  display: flex;
+  padding-right: 40px;
+}
+
+/* Destination Card */
+.destination-card {
+  background: linear-gradient(to bottom, rgba(255, 132, 31, 0.7), transparent);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgb(245, 242, 242);
+  text-align: center;
+  transform: translateX(-20px); /* Slight adjustment */
+}
+
+.destination-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.destination-card select {
+  background: linear-gradient(to bottom, rgba(255, 132, 31, 0.7), transparent);
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Change the text color of the dropdown */
+.destination-card select {
+  color: #ffffff; /* Change to your desired color */
+  background-color: linear-gradient(to bottom, rgba(255, 132, 31, 0.7), transparent); /* Optional: Set background color */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.destination-card select option {
+  color: #1b1b1b; /* Change the default option text color */
+}
+
+
+/* Destinations Section */
+.destinations {
+  position: relative;
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  z-index: 2;
+  height: 100vh; /* Full screen height */
+  transform: translateY(100vh); /* Initially position off-screen below hero */
+  transition: transform 1s ease-in-out; /* Smooth transition for scroll effect */
+  margin-bottom: -20px;
+}
+
+.destinations.active {
+  transform: translateY(0); /* Slide into view */
+}
+
+.destinations h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.destination-carousel {
+  display: flex;
+  width: 100%;
+  height: 500px; /* Simulates a smaller screen */
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+}
+
+.carousel-track {
+  display: flex;
+  animation: horizontal-swipe 15s linear infinite;
+}
+
+/* Destination Card Enhancements */
+.destination {
+  flex: 0 0 20%; /* Each card is smaller than full width */
+  margin-right: 20px; /* Adds transparent gap */
+  height: 90%; /* Relative to carousel */
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling effect */
+}
+
+/* Hover effect: Scale and brighten */
+.destination:hover {
+  transform: scale(1.05); /* Slight zoom */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Enhance shadow */
+}
+
+/* Click effect: Subtle rotation */
+.destination:active {
+  transform: scale(0.95) rotate(-2deg); /* Shrink and tilt */
+}
+
+/* Image Styling */
+.destination img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease; /* Smooth filter transition */
+}
+
+/* Hover effect on image: Add brightness */
+.destination:hover img {
+  filter: brightness(1.2); /* Slightly brighter */
+}
+
+/* Overlay Styling */
+.destination .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 15px;
+  font-size: 18px;
+  text-align: center;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+/* Show overlay on hover */
+.destination:hover .overlay {
+  opacity: 1; /* Fade in */
+}
+
+
+/* Smooth Scrolling Animation */
+@keyframes horizontal-swipe {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.activity-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adds spacing between cards */
+  padding: 20px;
+}
+
+.activity {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Ensure it spans the container */
+  max-width: 700px; /* Optional: Set a max width for better aesthetics */
+  margin: 0 auto; /* Center the cards */
+}
+
+.activity:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.activity img {
+  flex-shrink: 0; /* Prevents image from resizing */
+  width: 150px; /* Width of the image */
+  height: 100%; /* Ensures image spans the card's height */
+  object-fit: cover;
+}
+
+.activity p {
+  margin: 0;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.activities h1 {
+  text-align: center; /* Centers the text horizontally */
+  font-size: 24px; /* Adjust font size if needed */
+  font-weight: bold; /* Makes the text bold */
+  margin-bottom: 20px; /* Adds space below the heading */
+  color: #333; /* Optional: Sets the text color */
+}
+
+/* Deals and Offers Container */
+.deals {
+  margin-top: -30px;
+}
+
+.deals h2 {
+  text-align: center;
+  width: 100%;
+}
+
+.deals-offers-banner {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Adjust to fit your design */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Individual Banner */
+.banner {
+  position: absolute;
+  width: 90%; /* Reduced size */
+  height: 180px; /* Adjusted height */
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden;
+  opacity: 0; /* Start hidden */
+  transform: translateX(100%); /* Start off-screen */
+  animation: smooth-swipe 9s infinite;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Images */
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Keyframes for smooth and non-overlapping animations */
+@keyframes smooth-swipe {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+    opacity: 0; /* Invisible */
+  }
+  10%, 30% {
+    transform: translateX(0); /* Fully visible and centered */
+    opacity: 1; /* Fully visible */
+  }
+  40%, 100% {
+    transform: translateX(-100%); /* Move off-screen to the left */
+    opacity: 0; /* Invisible */
+  }
+}
+
+/* Animation delays to stagger banners */
+.banner:nth-child(1) {
+  animation-delay: 0s; /* First banner starts immediately */
+}
+
+.banner:nth-child(2) {
+  animation-delay: 3s; /* Second banner starts 3 seconds later */
+}
+
+.banner:nth-child(3) {
+  animation-delay: 6s; /* Third banner starts 6 seconds later */
+}
+
+
+.about-us,
+.faq-support {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.about-us h2,
+.faq-support h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.about-us p,
+.faq-support p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.about-us ul {
+  list-style: disc inside;
+  margin: 10px 0 20px 0;
+  color: #555;
+}
+
+.about-us ul li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.faq-item p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #333;
+  color: white;
+}
+
