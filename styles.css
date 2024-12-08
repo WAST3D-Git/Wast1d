@@ -56,7 +56,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background-image: url('Image/HERO-BG.JPG'); /* Default background */
+  background-image: url('Image/HERO-BG.jpg'); /* Default background */
   background-size: cover;
   background-position: center;
   display: flex;
