@@ -141,7 +141,6 @@ body {
   height: 100vh; /* Full screen height */
   transform: translateY(100vh); /* Initially position off-screen below hero */
   transition: transform 1s ease-in-out; /* Smooth transition for scroll effect */
-  margin-bottom: -20px;
 }
 
 .destinations.active {
@@ -286,7 +285,6 @@ body {
 
 /* Deals and Offers Container */
 .deals {
-  margin-top: -30px;
 }
 
 .deals h2 {
